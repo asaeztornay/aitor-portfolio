@@ -1,0 +1,147 @@
+# Aitor Sáez Tornay — Portfolio
+
+A one-page portfolio presenting Aitor's transition from industrial automation and robotics into web application development, cloud and software engineering.
+
+The site is plain HTML5, CSS and vanilla JavaScript. There is no framework, no build step, no npm install, no CDN, no analytics and no cookies.
+
+## What is included
+
+- Hero introduction with the positioning line from the CV
+- About section, including this website as the first portfolio project
+- Career transition timeline: Industrial Automation and Robotics → Technical Problem-Solving → Web Application Development → Cloud and Software Engineering
+- Field-project gallery grouped by region, with a region filter, five photos, a lightbox and intentional no-photo location cards
+- Technical skills grouped by CV category
+- AWS Academy Cloud Foundations section
+- AI-assisted development section
+- Current learning goals
+- Contact links for email, GitHub and LinkedIn
+- Accessible mobile navigation, keyboard-operable lightbox, scroll reveal, active nav highlighting and a scroll-driven timeline
+- Reduced-motion support, visible focus styles and semantic landmarks
+
+## File structure
+
+```text
+.
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── main.js
+├── assets/
+│   └── img/
+│       ├── favicon.svg
+│       ├── og-cover.png
+│       ├── README.txt
+│       └── projects/
+│           ├── chicago-robot-cell.jpg
+│           ├── chicago-teach-pendant.jpg
+│           ├── hibrido-robot-detail.jpg
+│           ├── k2022.jpg
+│           ├── london-handle-bucket-assembly.jpg
+│           └── portfolio-website.png
+├── cv.txt
+├── Curriculum Vitae - Aitor Sáez Tornay (2).pdf
+├── .gitignore
+└── README.md
+```
+
+`cv.txt` is the extracted text used as the factual source. The CV PDF and `cv.txt` are not modified by the site. Both are listed in `.gitignore` so they are not published by accident.
+
+## Local preview
+
+From the project root:
+
+```bash
+python3 -m http.server 8000
+```
+
+On Windows, if `python3` is not available:
+
+```powershell
+py -m http.server 8000
+```
+
+Then open:
+
+```text
+http://localhost:8000
+```
+
+Opening `index.html` directly also works, but a local server is recommended so relative paths behave like GitHub Pages.
+
+## Deploy to GitHub Pages
+
+1. Create a GitHub repository and push this project to the `main` branch. The CV PDF, `cv.txt` and the local prompt file are listed in `.gitignore`; keep them private unless you intend to publish them.
+2. In the repository, open **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select branch **main** and folder **/ (root)**.
+5. Save. GitHub will publish the site at:
+
+```text
+https://<username>.github.io/<repository>/
+```
+
+6. Update the placeholders before or after publishing:
+   - `<link rel="canonical" href="https://USERNAME.github.io/REPOSITORY/">`
+   - `og:url` and `og:image`
+   - `twitter:image`
+   - the `sameAs` array in the JSON-LD `Person` block
+
+The site has no build step, so GitHub Pages can serve it directly from the repository root.
+
+## Photos
+
+Five field/event photos are published in `assets/img/projects/`:
+
+- `chicago-robot-cell.jpg` — Chicago robot cell
+- `chicago-teach-pendant.jpg` — Chicago teach pendant
+- `hibrido-robot-detail.jpg` — Los Angeles line detail
+- `london-handle-bucket-assembly.jpg` — London handle and bucket assembly
+- `k2022.jpg` — K2022 trade fair
+
+They were auto-oriented, resized to a maximum of 1600 px on the long edge, re-encoded as JPEG at quality 82 and stripped of metadata. Each is under 500 KB.
+
+The remaining locations (Washington, Toronto, Quebec, Mexico, Cali, Quito, Guayaquil, Manta, Trinidad and Tobago, Netherlands, Germany) use intentional "field location" cards instead of photo placeholders. Washington links to Berry Global in Cumberland, Maryland, using the map link supplied by Aitor.
+
+The unoptimized originals remain in the project root and are listed in `.gitignore`. `assets/img/README.txt` documents every photo, its card, caption, alt text and source file.
+
+Do not use stock photos. Do not add client names, dates, metrics or technical details that are not in the CV or supplied by Aitor.
+
+## Accessibility notes
+
+- Semantic landmarks: `header`, `nav`, `main`, `section`, `figure`/`figcaption` where photos are added, and `footer`.
+- One `h1`; section headings use `h2` and card headings use `h3`/`h4` without skipping levels.
+- Skip link to `#main`.
+- Mobile menu button uses `aria-expanded` and `aria-controls`; it closes on Escape, on link click and on outside click.
+- Active navigation uses `aria-current="location"`.
+- Filter buttons use `aria-pressed`; the result count is announced with `role="status"`.
+- The lightbox uses a native `<dialog>`, closes on Escape or backdrop click, and returns focus to the trigger.
+- `prefers-reduced-motion: reduce` disables the animation and forces the timeline to its completed state.
+- Focus styles are visible on all interactive elements.
+
+## SEO
+
+- `lang="en"`
+- Unique title and meta description
+- Viewport and theme-color
+- Open Graph and Twitter card tags
+- Canonical placeholder
+- JSON-LD `Person` with name, email and an empty `sameAs` array
+
+## Known TODOs
+
+These are intentionally not invented:
+
+- **GitHub profile URL** — the CV text names GitHub, and the PDF links only to `https://github.com/`. Replace it with the real profile URL.
+- **LinkedIn profile URL** — the CV text names LinkedIn, and the PDF links only to `https://linkedin.com/`. Replace it with the real profile URL.
+- **Canonical and Open Graph URLs** — replace `USERNAME` and `REPOSITORY` with the real GitHub Pages path.
+- **Cali and Quebec** — both are written exactly as supplied. The sources do not state the country or province; confirm before publishing.
+- **Project dates** — not supplied, so they are not shown.
+- **Client names** — omitted except Berry Global, which Aitor supplied with the Washington map link.
+
+## Content sources
+
+- `cv.txt` — name, positioning, profile, skills, experience, education, AWS Academy, AI-assisted development, languages and availability.
+- User messages — field-project locations, the Chicago and Los Angeles captions, K2022 participation, the London handle/bucket process, the Washington/Berry Global map link, the photo files, and the instruction to present this website as the first portfolio project.
+
+No employers, dates, projects, metrics, certificates, testimonials or photos were invented.

@@ -1,0 +1,15 @@
+# Private source material — do not publish
+*.pdf
+cv.txt
+prompOpenCode1.txt
+
+# Unoptimized photo originals — optimized copies live in assets/img/projects/
+/chicago1.jpg
+/chicago2.jpg
+/hibrido.jpg
+/london.jpg
+/20221019_091221.jpg
+
+# OS files
+.DS_Store
+Thumbs.db
