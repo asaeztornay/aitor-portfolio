@@ -87,6 +87,10 @@ https://asaeztornay.github.io/aitor-portfolio/
 
 The site has no build step, so GitHub Pages can serve it directly from the repository root.
 
+## Troubleshooting
+
+If a change works locally but not on GitHub Pages, the browser or the Pages CDN may still be serving cached CSS or JavaScript. Hard-refresh with **Ctrl+F5** (or **Cmd+Shift+R** on macOS). When you change `css/styles.css` or `js/main.js`, update the `?v=YYYYMMDD` query string on both files in `index.html` so browsers fetch the new versions.
+
 ## Photos and video
 
 Five field/event photos are published in `assets/img/projects/`:
