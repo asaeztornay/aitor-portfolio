@@ -1254,6 +1254,54 @@ button {
   font-size: 0.76rem;
 }
 
+.hands-on {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding-top: clamp(1.5rem, 3vw, 2rem);
+  border-top: 1px solid var(--line);
+}
+
+.hands-on-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hands-on-header p:last-child {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.hands-on-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.field-note {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: rgba(16, 31, 51, 0.55);
+}
+
+.field-note .project-media {
+  border-bottom: 1px solid var(--line);
+}
+
+.field-note-caption {
+  padding: 0.85rem 1rem 1rem;
+}
+
+.field-note-caption p {
+  margin-top: 0.3rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
 /* --------------------------------------------------------------------------
    AWS Academy
    -------------------------------------------------------------------------- */
@@ -1735,6 +1783,10 @@ html.js .reveal.is-visible {
   }
 
   .project-media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hands-on-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

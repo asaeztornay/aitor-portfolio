@@ -9,16 +9,15 @@
   <meta name="theme-color" content="#07111f">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
-  <!-- TODO: Replace the canonical placeholder with the final GitHub Pages URL. -->
-  <link rel="canonical" href="https://USERNAME.github.io/REPOSITORY/">
+  <link rel="canonical" href="https://asaeztornay.github.io/aitor-portfolio/">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Aitor Sáez Tornay | Web Application Development Portfolio">
   <meta property="og:description" content="From industrial automation and robotics to web application development, cloud and software engineering.">
-  <meta property="og:url" content="https://USERNAME.github.io/REPOSITORY/">
+  <meta property="og:url" content="https://asaeztornay.github.io/aitor-portfolio/">
   <meta property="og:site_name" content="Aitor Sáez Tornay">
   <meta property="og:locale" content="en_IE">
-  <meta property="og:image" content="https://USERNAME.github.io/REPOSITORY/assets/img/og-cover.png">
+  <meta property="og:image" content="https://asaeztornay.github.io/aitor-portfolio/assets/img/og-cover.png">
   <meta property="og:image:alt" content="Aitor Sáez Tornay portfolio homepage">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
@@ -26,7 +25,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Aitor Sáez Tornay | Web Application Development Portfolio">
   <meta name="twitter:description" content="From industrial automation and robotics to web application development, cloud and software engineering.">
-  <meta name="twitter:image" content="https://USERNAME.github.io/REPOSITORY/assets/img/og-cover.png">
+  <meta name="twitter:image" content="https://asaeztornay.github.io/aitor-portfolio/assets/img/og-cover.png">
 
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add('js');</script>
@@ -305,19 +304,14 @@
               </figure>
             </article>
 
-            <article class="project-card reveal">
-              <figure class="project-figure">
-                <button class="project-media" type="button" data-lightbox data-full="assets/img/projects/hibrido-robot-detail.jpg" data-caption="Los Angeles — robot detail on the line." data-alt="Close-up of a robot gripper and pneumatic control manifold on a production line.">
-                  <img src="assets/img/projects/hibrido-robot-detail.jpg" alt="Close-up of a robot gripper and pneumatic control manifold on a production line." width="1600" height="1200" loading="lazy">
-                  <span class="media-hint" aria-hidden="true">View photo</span>
-                </button>
-                <figcaption class="project-body">
-                  <span class="project-region">North America</span>
-                  <h4>Los Angeles</h4>
-                  <p>Another line.</p>
-                  <span class="card-meta">Field photo</span>
-                </figcaption>
-              </figure>
+            <article class="project-card project-card--location reveal">
+              <span class="location-mark" aria-hidden="true"><svg class="icon"><use href="#icon-pin"></use></svg></span>
+              <div class="project-body">
+                <span class="project-region">North America</span>
+                <h4>Los Angeles</h4>
+                <p>Another line.</p>
+                <span class="card-meta">Field location</span>
+              </div>
             </article>
 
             <article class="project-card project-card--location reveal">
@@ -379,14 +373,19 @@
               </div>
             </article>
 
-            <article class="project-card project-card--location reveal">
-              <span class="location-mark" aria-hidden="true"><svg class="icon"><use href="#icon-pin"></use></svg></span>
-              <div class="project-body">
-                <span class="project-region">Latin America</span>
-                <h4>Quito</h4>
-                <p>International deployment.</p>
-                <span class="card-meta">Field location</span>
-              </div>
+            <article class="project-card reveal">
+              <figure class="project-figure">
+                <button class="project-media" type="button" data-lightbox data-full="assets/img/projects/hibrido-robot-detail.jpg" data-caption="Quito — robot detail on the line." data-alt="Close-up of a robot gripper and pneumatic control manifold on a production line.">
+                  <img src="assets/img/projects/hibrido-robot-detail.jpg" alt="Close-up of a robot gripper and pneumatic control manifold on a production line." width="1600" height="1200" loading="lazy">
+                  <span class="media-hint" aria-hidden="true">View photo</span>
+                </button>
+                <figcaption class="project-body">
+                  <span class="project-region">Latin America</span>
+                  <h4>Quito</h4>
+                  <p>Robot detail on the line.</p>
+                  <span class="card-meta">Field photo</span>
+                </figcaption>
+              </figure>
             </article>
 
             <article class="project-card project-card--location reveal">
@@ -583,6 +582,35 @@
             </ul>
           </article>
         </div>
+
+        <div class="hands-on reveal">
+          <div class="hands-on-header">
+            <p class="eyebrow">Hands-on practice</p>
+            <p>Programming and networking from the field, alongside the software stack.</p>
+          </div>
+          <div class="hands-on-grid">
+            <figure class="field-note">
+              <button class="project-media" type="button" data-lightbox data-full="assets/img/projects/programming-plc.jpg" data-caption="PLC programming and diagnostics in CODESYS during a machine build." data-alt="Laptop running CODESYS PLC programming software in a workshop.">
+                <img src="assets/img/projects/programming-plc.jpg" alt="Laptop running CODESYS PLC programming software in a workshop." width="1200" height="1600" loading="lazy">
+                <span class="media-hint" aria-hidden="true">View photo</span>
+              </button>
+              <figcaption class="field-note-caption">
+                <span class="project-region">Programming</span>
+                <p>PLC programming and diagnostics in CODESYS during a machine build.</p>
+              </figcaption>
+            </figure>
+            <figure class="field-note">
+              <button class="project-media" type="button" data-lightbox data-full="assets/img/projects/networking-commissioning.jpg" data-caption="Two laptops connected to a control cabinet during commissioning and network checks." data-alt="Two laptops connected to an industrial control cabinet during commissioning.">
+                <img src="assets/img/projects/networking-commissioning.jpg" alt="Two laptops connected to an industrial control cabinet during commissioning." width="1200" height="1600" loading="lazy">
+                <span class="media-hint" aria-hidden="true">View photo</span>
+              </button>
+              <figcaption class="field-note-caption">
+                <span class="project-region">Networking</span>
+                <p>Two laptops connected to a control cabinet during commissioning and network checks.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -691,19 +719,17 @@
                 <svg class="icon contact-arrow" aria-hidden="true"><use href="#icon-arrow"></use></svg>
               </a>
             </li>
-            <!-- TODO: Replace https://github.com/ with Aitor's GitHub profile URL. The CV only contains the platform root. -->
             <li>
-              <a class="contact-link" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub (profile URL pending)">
+              <a class="contact-link" href="https://github.com/asaeztornay" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)">
                 <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="#icon-github"></use></svg></span>
-                <span><strong>GitHub</strong><span>Profile URL pending</span></span>
+                <span><strong>GitHub</strong><span>github.com/asaeztornay</span></span>
                 <svg class="icon contact-arrow" aria-hidden="true"><use href="#icon-external"></use></svg>
               </a>
             </li>
-            <!-- TODO: Replace https://linkedin.com/ with Aitor's LinkedIn profile URL. The CV only contains the platform root. -->
             <li>
-              <a class="contact-link" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (profile URL pending)">
+              <a class="contact-link" href="https://www.linkedin.com/in/aitor-saez-tornay-765793150/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">
                 <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="#icon-linkedin"></use></svg></span>
-                <span><strong>LinkedIn</strong><span>Profile URL pending</span></span>
+                <span><strong>LinkedIn</strong><span>linkedin.com/in/aitor-saez-tornay</span></span>
                 <svg class="icon contact-arrow" aria-hidden="true"><use href="#icon-external"></use></svg>
               </a>
             </li>
@@ -738,6 +764,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Aitor Sáez Tornay",
+    "url": "https://asaeztornay.github.io/aitor-portfolio/",
     "email": "mailto:asaeztornay@gmail.com",
     "jobTitle": "Web Application Development Student",
     "address": {
@@ -745,9 +772,11 @@
       "addressLocality": "Dublin",
       "addressCountry": "IE"
     },
-    "sameAs": []
+    "sameAs": [
+      "https://github.com/asaeztornay",
+      "https://www.linkedin.com/in/aitor-saez-tornay-765793150/"
+    ]
   }
   </script>
-  <!-- TODO: Add GitHub and LinkedIn profile URLs to the Person sameAs array. The CV only contains the platform roots. -->
 </body>
 </html>

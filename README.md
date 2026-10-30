@@ -38,7 +38,9 @@ The site is plain HTML5, CSS and vanilla JavaScript. There is no framework, no b
 │           ├── hibrido-robot-detail.jpg
 │           ├── k2022.jpg
 │           ├── london-handle-bucket-assembly.jpg
-│           └── portfolio-website.png
+│           ├── networking-commissioning.jpg
+│           ├── portfolio-website.png
+│           └── programming-plc.jpg
 ├── cv.txt
 ├── Curriculum Vitae - Aitor Sáez Tornay (2).pdf
 ├── .gitignore
@@ -71,21 +73,17 @@ Opening `index.html` directly also works, but a local server is recommended so r
 
 ## Deploy to GitHub Pages
 
-1. Create a GitHub repository and push this project to the `main` branch. The CV PDF, `cv.txt` and the local prompt file are listed in `.gitignore`; keep them private unless you intend to publish them.
+1. The repository is already configured as `asaeztornay/aitor-portfolio`. Push this project to the `main` branch. The CV PDF, `cv.txt` and the local prompt file are listed in `.gitignore`; keep them private unless you intend to publish them.
 2. In the repository, open **Settings → Pages**.
 3. Under **Build and deployment**, choose **Deploy from a branch**.
 4. Select branch **main** and folder **/ (root)**.
 5. Save. GitHub will publish the site at:
 
 ```text
-https://<username>.github.io/<repository>/
+https://asaeztornay.github.io/aitor-portfolio/
 ```
 
-6. Update the placeholders before or after publishing:
-   - `<link rel="canonical" href="https://USERNAME.github.io/REPOSITORY/">`
-   - `og:url` and `og:image`
-   - `twitter:image`
-   - the `sameAs` array in the JSON-LD `Person` block
+6. The canonical, Open Graph, Twitter and JSON-LD URLs are already set to `https://asaeztornay.github.io/aitor-portfolio/`. If you rename the repository or use a custom domain, update them together with `og:image` and `twitter:image`.
 
 The site has no build step, so GitHub Pages can serve it directly from the repository root.
 
@@ -95,15 +93,20 @@ Five field/event photos are published in `assets/img/projects/`:
 
 - `chicago-robot-cell.jpg` — Chicago robot cell
 - `chicago-teach-pendant.jpg` — Chicago teach pendant
-- `hibrido-robot-detail.jpg` — Los Angeles line detail
+- `hibrido-robot-detail.jpg` — Quito line detail
 - `london-handle-bucket-assembly.jpg` — London handle and bucket assembly
 - `k2022.jpg` — K2022 trade fair
 
+Two hands-on photos appear in the Skills section:
+
+- `programming-plc.jpg` — PLC programming and diagnostics in CODESYS
+- `networking-commissioning.jpg` — laptops connected to a control cabinet during commissioning
+
 They were auto-oriented, resized to a maximum of 1600 px on the long edge, re-encoded as JPEG at quality 82 and stripped of metadata. Each is under 500 KB.
 
-The remaining locations (Washington, Toronto, Quebec, Mexico, Cali, Quito, Guayaquil, Manta, Trinidad and Tobago, Netherlands, Germany) use intentional "field location" cards instead of photo placeholders. Washington links to Berry Global in Cumberland, Maryland, using the map link supplied by Aitor.
+The remaining locations (Washington, Los Angeles, Toronto, Quebec, Mexico, Cali, Guayaquil, Manta, Trinidad and Tobago, Netherlands, Germany) use intentional "field location" cards instead of photo placeholders. Washington links to Berry Global in Cumberland, Maryland, using the map link supplied by Aitor.
 
-The unoptimized originals remain in the project root and are listed in `.gitignore`. `assets/img/README.txt` documents every photo, its card, caption, alt text and source file.
+The unoptimized originals were moved to `../WebAitorSaez-originals/`, outside this repository. The `.gitignore` still lists their old root filenames in case they are ever copied back. `assets/img/README.txt` documents every photo, its card, caption, alt text and source file.
 
 Do not use stock photos. Do not add client names, dates, metrics or technical details that are not in the CV or supplied by Aitor.
 
@@ -132,9 +135,7 @@ Do not use stock photos. Do not add client names, dates, metrics or technical de
 
 These are intentionally not invented:
 
-- **GitHub profile URL** — the CV text names GitHub, and the PDF links only to `https://github.com/`. Replace it with the real profile URL.
-- **LinkedIn profile URL** — the CV text names LinkedIn, and the PDF links only to `https://linkedin.com/`. Replace it with the real profile URL.
-- **Canonical and Open Graph URLs** — replace `USERNAME` and `REPOSITORY` with the real GitHub Pages path.
+- **LinkedIn URL** — set to `https://www.linkedin.com/in/aitor-saez-tornay-765793150/`, found from Aitor's public profile. Confirm it is the correct profile before publishing.
 - **Cali and Quebec** — both are written exactly as supplied. The sources do not state the country or province; confirm before publishing.
 - **Project dates** — not supplied, so they are not shown.
 - **Client names** — omitted except Berry Global, which Aitor supplied with the Washington map link.
@@ -142,6 +143,8 @@ These are intentionally not invented:
 ## Content sources
 
 - `cv.txt` — name, positioning, profile, skills, experience, education, AWS Academy, AI-assisted development, languages and availability.
-- User messages — field-project locations, the Chicago and Los Angeles captions, K2022 participation, the London handle/bucket process, the Washington/Berry Global map link, the photo files, and the instruction to present this website as the first portfolio project.
+- Repository remote — GitHub username `asaeztornay` and repository name `aitor-portfolio`, used for the profile link and the GitHub Pages URL.
+- Public LinkedIn profile — the LinkedIn URL, which should be confirmed before publishing.
+- User messages — field-project locations, the Chicago and Quito captions, K2022 participation, the London handle/bucket process, the Washington/Berry Global map link, the photo files and their intended cards, and the instruction to present this website as the first portfolio project.
 
 No employers, dates, projects, metrics, certificates, testimonials or photos were invented.

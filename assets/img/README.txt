@@ -23,7 +23,7 @@ Published photos
     Source: chicago2.jpg
 
   hibrido-robot-detail.jpg
-    Card: Los Angeles (North America)
+    Card: Quito (Latin America)
     Shows: robot detail on the line.
     Alt: Close-up of a robot gripper and pneumatic control manifold on a
          production line.
@@ -45,6 +45,20 @@ Published photos
     Source: 20221019_091221.jpg
     Confirmed by Aitor that this photo is from K2022.
 
+  programming-plc.jpg
+    Card: Skills — Hands-on practice (Programming)
+    Shows: PLC programming and diagnostics in CODESYS during a machine build.
+    Alt: Laptop running CODESYS PLC programming software in a workshop.
+    Source: ordenador (1).jpg
+
+  networking-commissioning.jpg
+    Card: Skills — Hands-on practice (Networking)
+    Shows: two laptops connected to a control cabinet during commissioning and
+           network checks.
+    Alt: Two laptops connected to an industrial control cabinet during
+         commissioning.
+    Source: ordenador (2).jpg
+
   portfolio-website.png
     Card: This website (About section)
     Screenshot of the finished page. Replace it if the hero design changes.
@@ -60,11 +74,11 @@ These locations are presented as "field location" map tiles rather than photo
 placeholders. Do not add stock images:
 
   Washington (links to Berry Global, Cumberland, Maryland)
+  Los Angeles
   Toronto
   Quebec
   Mexico
   Cali
-  Quito
   Guayaquil
   Manta
   Trinidad and Tobago
@@ -91,7 +105,10 @@ and convert the card to the same structure used by the photo cards:
 Original files
 --------------
 
-The unoptimized originals remain in the project root (chicago1.jpg,
-chicago2.jpg, hibrido.jpg, london.jpg, 20221019_091221.jpg). They are listed in
-.gitignore so they are not published. Delete them only after confirming the
-optimized copies are the ones you want.
+The unoptimized originals were moved outside the repository to:
+
+  ..\WebAitorSaez-originals\
+
+They are kept there as a backup and are not published. If they are ever copied
+back into the project root, the filenames are listed in .gitignore. Delete the
+backup folder only after confirming the optimized copies are the ones you want.
