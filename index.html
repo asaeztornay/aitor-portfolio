@@ -59,6 +59,9 @@
     <symbol id="icon-external" viewBox="0 0 24 24">
       <path d="M14 3h7v7M10 14 21 3M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24">
+      <path d="M8 5v14l11-7z"/>
+    </symbol>
     <symbol id="icon-spark" viewBox="0 0 24 24">
       <path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2Zm7 13 .9 3.1L23 19l-3.1.9L19 23l-.9-3.1L15 19l3.1-.9L19 15Z"/>
     </symbol>
@@ -309,7 +312,7 @@
               <div class="project-body">
                 <span class="project-region">North America</span>
                 <h4>Los Angeles</h4>
-                <p>Another line.</p>
+                <p>On-site installation, service and technical training.</p>
                 <span class="card-meta">Field location</span>
               </div>
             </article>
@@ -319,7 +322,7 @@
               <div class="project-body">
                 <span class="project-region">North America</span>
                 <h4>Washington</h4>
-                <p>Deployment at Berry Global in Cumberland, Maryland.</p>
+                <p>On-site installation, service and technical training at Berry Global in Cumberland, Maryland.</p>
                 <a class="location-link" href="https://maps.app.goo.gl/2YCHcTWetKz7BCvT7" target="_blank" rel="noopener noreferrer" aria-label="View Berry Global, Cumberland on Google Maps (opens in a new tab)">View location <svg class="icon" aria-hidden="true"><use href="#icon-external"></use></svg></a>
                 <span class="card-meta">Field location</span>
               </div>
@@ -330,7 +333,7 @@
               <div class="project-body">
                 <span class="project-region">North America</span>
                 <h4>Toronto</h4>
-                <p>International deployment.</p>
+                <p>On-site installation, service and technical training.</p>
                 <span class="card-meta">Field location</span>
               </div>
             </article>
@@ -340,7 +343,7 @@
               <div class="project-body">
                 <span class="project-region">North America</span>
                 <h4>Quebec</h4>
-                <p>International deployment.</p>
+                <p>On-site installation, service and technical training.</p>
                 <span class="card-meta">Field location</span>
               </div>
             </article>
@@ -358,7 +361,7 @@
               <div class="project-body">
                 <span class="project-region">Latin America</span>
                 <h4>Mexico</h4>
-                <p>International deployment.</p>
+                <p>On-site installation, service and technical training.</p>
                 <span class="card-meta">Field location</span>
               </div>
             </article>
@@ -368,7 +371,7 @@
               <div class="project-body">
                 <span class="project-region">Latin America</span>
                 <h4>Cali</h4>
-                <p>International deployment.</p>
+                <p>On-site installation, service and technical training.</p>
                 <span class="card-meta">Field location</span>
               </div>
             </article>
@@ -393,7 +396,7 @@
               <div class="project-body">
                 <span class="project-region">Latin America</span>
                 <h4>Guayaquil</h4>
-                <p>International deployment.</p>
+                <p>On-site installation, service and technical training.</p>
                 <span class="card-meta">Field location</span>
               </div>
             </article>
@@ -403,7 +406,7 @@
               <div class="project-body">
                 <span class="project-region">Latin America</span>
                 <h4>Manta</h4>
-                <p>International deployment.</p>
+                <p>On-site installation, service and technical training.</p>
                 <span class="card-meta">Field location</span>
               </div>
             </article>
@@ -421,7 +424,7 @@
               <div class="project-body">
                 <span class="project-region">Caribbean</span>
                 <h4>Trinidad and Tobago</h4>
-                <p>International deployment.</p>
+                <p>On-site installation, service and technical training.</p>
                 <span class="card-meta">Field location</span>
               </div>
             </article>
@@ -454,7 +457,7 @@
               <div class="project-body">
                 <span class="project-region">Europe</span>
                 <h4>Netherlands</h4>
-                <p>International deployment.</p>
+                <p>On-site installation, service and technical training.</p>
                 <span class="card-meta">Field location</span>
               </div>
             </article>
@@ -464,7 +467,7 @@
               <div class="project-body">
                 <span class="project-region">Europe</span>
                 <h4>Germany</h4>
-                <p>International deployment.</p>
+                <p>On-site installation, service and technical training.</p>
                 <span class="card-meta">Field location</span>
               </div>
             </article>
@@ -487,7 +490,12 @@
                   <span class="project-region">Event</span>
                   <h4>K2022</h4>
                   <p>Participation in K2022.</p>
-                  <span class="card-meta">Event photo</span>
+                  <button class="video-link" type="button" data-video="https://player.vimeo.com/video/762035415?dnt=1&amp;autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0" data-video-title="K2022 — The future of food packaging" aria-haspopup="dialog">
+                    <span class="video-play" aria-hidden="true"><svg class="icon"><use href="#icon-play"></use></svg></span>
+                    <span>Watch the K2022 video</span>
+                    <span class="video-duration">2:25</span>
+                  </button>
+                  <span class="card-meta">Event photo + video</span>
                 </figcaption>
               </figure>
             </article>
@@ -756,6 +764,22 @@
       </div>
       <img id="lightbox-image" alt="">
       <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </dialog>
+
+  <dialog class="lightbox video-dialog" id="video-dialog" aria-labelledby="video-title">
+    <div class="lightbox-inner">
+      <div class="lightbox-header">
+        <div>
+          <h2 id="video-title">K2022 — The future of food packaging</h2>
+          <p class="video-meta">IML Solutions &amp; Netstal · 2:25</p>
+        </div>
+        <button class="lightbox-close" type="button" aria-label="Close video">
+          <svg class="icon" aria-hidden="true"><use href="#icon-close"></use></svg>
+        </button>
+      </div>
+      <div class="video-frame" id="video-frame"></div>
+      <p class="video-fallback"><a href="https://vimeo.com/762035415" target="_blank" rel="noopener noreferrer">Open this video on Vimeo</a></p>
     </div>
   </dialog>
 

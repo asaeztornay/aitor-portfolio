@@ -67,6 +67,21 @@ Published photos
     Open Graph / social sharing image generated from the hero section.
     1200 x 630 px.
 
+K2022 video
+-----------
+
+The K2022 card also links to this Vimeo video, supplied by Aitor:
+
+  https://vimeo.com/762035415
+
+  Title: K2022 - The future of food packaging - IML Solutions & Netstal
+  Author: IML Solutions
+  Duration: 2:25
+
+The player is loaded only when the visitor presses "Watch the K2022 video".
+It uses Vimeo's dnt=1 parameter, and the iframe is removed when the dialog
+closes. A direct Vimeo link is shown as a fallback.
+
 Intentional no-photo cards
 --------------------------
 

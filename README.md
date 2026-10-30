@@ -9,7 +9,7 @@ The site is plain HTML5, CSS and vanilla JavaScript. There is no framework, no b
 - Hero introduction with the positioning line from the CV
 - About section, including this website as the first portfolio project
 - Career transition timeline: Industrial Automation and Robotics → Technical Problem-Solving → Web Application Development → Cloud and Software Engineering
-- Field-project gallery grouped by region, with a region filter, five photos, a lightbox and intentional no-photo location cards
+- Field-project gallery grouped by region, with a region filter, five photos, a lightbox, an on-demand K2022 video and intentional no-photo location cards
 - Technical skills grouped by CV category
 - AWS Academy Cloud Foundations section
 - AI-assisted development section
@@ -87,7 +87,7 @@ https://asaeztornay.github.io/aitor-portfolio/
 
 The site has no build step, so GitHub Pages can serve it directly from the repository root.
 
-## Photos
+## Photos and video
 
 Five field/event photos are published in `assets/img/projects/`:
 
@@ -106,6 +106,8 @@ They were auto-oriented, resized to a maximum of 1600 px on the long edge, re-en
 
 The remaining locations (Washington, Los Angeles, Toronto, Quebec, Mexico, Cali, Guayaquil, Manta, Trinidad and Tobago, Netherlands, Germany) use intentional "field location" cards instead of photo placeholders. Washington links to Berry Global in Cumberland, Maryland, using the map link supplied by Aitor.
 
+The K2022 card also includes an on-demand video: **K2022 — The future of food packaging** by IML Solutions & Netstal (Vimeo, 2:25). The Vimeo player is not loaded until the visitor presses **Watch the K2022 video**. It uses `dnt=1`, is removed from the page when the dialog closes, and a direct Vimeo link is provided as a fallback.
+
 The unoptimized originals were moved to `../WebAitorSaez-originals/`, outside this repository. The `.gitignore` still lists their old root filenames in case they are ever copied back. `assets/img/README.txt` documents every photo, its card, caption, alt text and source file.
 
 Do not use stock photos. Do not add client names, dates, metrics or technical details that are not in the CV or supplied by Aitor.
@@ -119,6 +121,7 @@ Do not use stock photos. Do not add client names, dates, metrics or technical de
 - Active navigation uses `aria-current="location"`.
 - Filter buttons use `aria-pressed`; the result count is announced with `role="status"`.
 - The lightbox uses a native `<dialog>`, closes on Escape or backdrop click, and returns focus to the trigger.
+- The video dialog follows the same pattern: it loads the Vimeo player only when opened, closes on Escape or backdrop click, removes the iframe to stop playback, and returns focus to the trigger.
 - `prefers-reduced-motion: reduce` disables the animation and forces the timeline to its completed state.
 - Focus styles are visible on all interactive elements.
 
@@ -145,6 +148,7 @@ These are intentionally not invented:
 - `cv.txt` — name, positioning, profile, skills, experience, education, AWS Academy, AI-assisted development, languages and availability.
 - Repository remote — GitHub username `asaeztornay` and repository name `aitor-portfolio`, used for the profile link and the GitHub Pages URL.
 - Public LinkedIn profile — the LinkedIn URL, which should be confirmed before publishing.
+- User-supplied Vimeo URL — the K2022 video by IML Solutions & Netstal; its title, author and duration were read from Vimeo's public oEmbed metadata.
 - User messages — field-project locations, the Chicago and Quito captions, K2022 participation, the London handle/bucket process, the Washington/Berry Global map link, the photo files and their intended cards, and the instruction to present this website as the first portfolio project.
 
 No employers, dates, projects, metrics, certificates, testimonials or photos were invented.

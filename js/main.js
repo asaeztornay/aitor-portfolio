@@ -214,6 +214,54 @@
     });
   }
 
+  const videoDialog = document.querySelector('#video-dialog');
+  const videoFrame = document.querySelector('#video-frame');
+  const videoTitle = document.querySelector('#video-title');
+  const videoClose = document.querySelector('#video-dialog .lightbox-close');
+  let lastVideoTrigger = null;
+
+  const closeVideo = () => {
+    if (videoDialog && videoDialog.open) videoDialog.close();
+  };
+
+  document.querySelectorAll('[data-video]').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      if (!videoDialog || !videoFrame) return;
+
+      lastVideoTrigger = trigger;
+      videoFrame.innerHTML = '';
+
+      const iframe = document.createElement('iframe');
+      iframe.src = trigger.dataset.video;
+      iframe.title = trigger.dataset.videoTitle || 'K2022 video';
+      iframe.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.setAttribute('allowfullscreen', '');
+      videoFrame.appendChild(iframe);
+
+      if (videoTitle && trigger.dataset.videoTitle) {
+        videoTitle.textContent = trigger.dataset.videoTitle;
+      }
+
+      if (!videoDialog.open) videoDialog.showModal();
+      document.body.classList.add('lightbox-open');
+    });
+  });
+
+  if (videoClose) videoClose.addEventListener('click', closeVideo);
+
+  if (videoDialog) {
+    videoDialog.addEventListener('click', (event) => {
+      if (event.target === videoDialog) closeVideo();
+    });
+
+    videoDialog.addEventListener('close', () => {
+      if (videoFrame) videoFrame.innerHTML = '';
+      document.body.classList.remove('lightbox-open');
+      if (lastVideoTrigger) lastVideoTrigger.focus();
+    });
+  }
+
   const year = document.querySelector('#year');
   if (year) year.textContent = new Date().getFullYear();
 })();
